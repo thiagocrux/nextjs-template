@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Main /> should render the heading 1`] = `
+exports[`<Main /> should render the heading with the right text and backgroudn color 1`] = `
+.c0 {
+  color: red;
+  background-color: #ffffff;
+}
+
 <main
-  class="sc-blHHSb gZgpTz"
+  class="c0"
   data-testid="main"
 >
   <h1>
