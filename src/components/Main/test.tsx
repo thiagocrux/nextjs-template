@@ -7,11 +7,11 @@ describe('<Main />', () => {
     const { container } = render(<Main />);
 
     expect(
-      screen.getByRole('heading', { name: /hello, world!/i }),
+      screen.getByRole('heading', { name: /next.js template/i }),
     ).toBeInTheDocument();
 
     expect(container.firstChild).toHaveStyle({
-      'background-color': '#ffffff',
+      'background-color': '#333333',
     });
 
     expect(container.firstChild).toMatchSnapshot();
