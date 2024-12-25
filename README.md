@@ -1,6 +1,6 @@
 # Next.js Project Template
 
-A template to kickstart Next.js.
+A template to kickstart a Next.js project.
 
 ## Technologies
 
