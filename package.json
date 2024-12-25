@@ -7,14 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install",
-    "precommit": "lint-staged",
-    "test": "jest --passWithNoTests --maxWorkers=50%",
-    "test:watch": "jest --watch --maxWorkers=25%",
-    "test:ci": "jest --runInBand",
+    "storybook:build": "storybook build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "generate:component": "npx plop --plopfile generators/plopfile.js"
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch --maxWorkers=25%",
+    "test": "jest --passWithNoTests --maxWorkers=50%",
+    "generate:component": "npx plop --plopfile generators/plopfile.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "15.0.1",

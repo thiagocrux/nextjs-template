@@ -1,71 +1,156 @@
-# Next.js template
+# Next.js Project Template
 
-This is a project template for a Next.js application with TypeScript, Styled Components, Storybook, Jest, ESLint, Prettier and commit linters already configured.
+A template to kickstart Next.js.
 
-## Setup
+## Technologies
 
-By default this project uses [pnpm](https://pnpm.io/) and you can run the command below to install all the dependencies.
+This template comes pre-configured with the following technologies:
+
+- `eslint`: A linting tool for JavaScript/TypeScript code.
+- `jest`: A testing framework for JavaScript, designed to ensure correctness of any JavaScript codebase.
+- `lint-staged`: Runs linters on Git staged files.
+- `plop`: A micro-generator framework that makes it easy to create code.
+- `prettier`: A code formatter.
+- `storybook`: A tool for developing UI components in isolation for React, Vue, and Angular.
+- `styled-components`: A library for React and React Native that allows you to use component-level styles in your application.
+
+_For more information about other dependencies, see the `package.json` file._
+
+## Installation
+
+1. Create a new repository from the template:
 
 ```bash
+gh repo create your-new-repo-name --template thiagocrux/nextjs-template
+```
+
+2. Browse to the project folder:
+
+```bash
+cd your-project-folder
+```
+
+3. Install dependencies:
+
+```
 pnpm install
 ```
 
-## Scripts
+## Available scripts
 
-Start the development server on `http://localhost:3000`:
+This section describes the available scripts in the `package.json` file and their functionalities.
 
-```bash
-pnpm dev
-```
+### Development
 
-Build the application for production:
+- #### `dev`
 
-```bash
-pnpm build
-```
+  Starts the server in development mode using `next dev` with TurboPack, enabling faster builds and live-reloading.
 
-Start the production server:
+  ```bash
+  pnpm dev
+  ```
 
-```bash
-pnpm start
-```
+### Production
 
-Search for errors:
+- #### `build`
 
-```bash
-pnpm lint
-```
+  Compiles the `next` application for production.
 
-Run tests:
+  ```bash
+  pnpm build
+  ```
 
-```bash
-# Run tests
-pnpm test
+- #### `start`
 
-# Run tests and check the coverage
-pnpm test:coverage
+  Runs the compiled `next` application in production mode..
 
-# Run all tests serially in the current process
-pnpm test:ci
-```
+  ```bash
+  pnpm start
+  ```
 
-Start storybook server on `http://localhost:6006`:
+### Testing
 
-```bash
-pnpm storybook
-```
+- #### `test`
 
-Build storybook for production:
+  Runs all tests using the `jest` framework with a maximum of 50% workers to optimize performance.
 
-```bash
-pnpm build-storybook
-```
+  ```bash
+  pnpm test
+  ```
 
-Auto generate a new component template files (component, styles, test and story files):
+- #### `test:ci`
 
-```bash
-pnpm generate:component
-```
+  Runs all tests using the `jest` framework in a single process, useful for continuous integration environments.
+
+  ```bash
+  pnpm test:ci
+  ```
+
+- #### `test:watch`
+
+  Runs tests in watch mode with `jest`, re-running tests related to changed files and utilizing a maximum of 25% workers.
+
+  ```bash
+  pnpm test:watch
+  ```
+
+### Code quality
+
+- #### `lint`
+
+  Analyzes your codebase for potential errors and style violations using `next lint`.
+
+  ```bash
+  pnpm lint
+  ```
+
+### Storybook
+
+- #### `storybook`
+
+  Starts the `storybook` server for developing UI components in isolation.
+
+  ```bash
+  pnpm storybook
+  ```
+
+- #### `storybook:build`
+
+  Builds the `storybook` application for production deployment.
+
+  ```bash
+  pnpm storybook:build
+  ```
+
+### Code generation
+
+- #### `generate:component`
+
+  Generates new components using `plop` with the specified `plopfile`.
+
+  ```bash
+  pnpm generate:component
+  ```
+
+### Git hooks
+
+- #### `prepare`
+
+  Automatically configures Git hooks (via `husky`) before each commit.
+
+  ```bash
+  pnpm prepare
+  ```
+
+## Useful links
+
+- [Next.js](https://nextjs.org/)
+- [ESLint](https://eslint.org/)
+- [Jest](https://jestjs.io/)
+- [Plop](https://plopjs.com/)
+- [Storybook](https://storybook.js.org/)
+- [Styled Components](https://styled-components.com/)
+- [Testing Library](https://testing-library.com/)
 
 ## License
 
