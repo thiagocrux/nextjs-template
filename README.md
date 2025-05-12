@@ -142,7 +142,7 @@ This section describes the available scripts in the `package.json` file and thei
   pnpm prepare
   ```
 
-## Useful links
+## Related links
 
 - [Next.js](https://nextjs.org/)
 - [ESLint](https://eslint.org/)
